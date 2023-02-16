@@ -1,18 +1,9 @@
 *** Settings ***
-
-Library    SeleniumLibrary
-
-*** Variables ***
-${emptyText}    
-
-*** Test Cases ***
-*** Settings ***
 Library    SeleniumLibrary
 *** Variables ***
 ${url}    https://magento.softwaretestingboard.com/
 ${browser}    Chrome
 *** Test Cases ***
-# Partie redondonte à supprimer 
 Accèss au catalogue
     Open Browser    ${url}    ${browser}
     Wait Until Element Is Visible    id:ui-id-4    15
@@ -29,25 +20,5 @@ Ajouter au panier
     Click Element    class:actions-primary 
     Wait Until Page Contains Element    class:price-excluding-tax    15
     Click Element   class:minicart-wrapper
+    sleep    20
     Page Should Contain    Breathe-Easy Tank
-    Go To    https://magento.softwaretestingboard.com/checkout/#shipping
-# Partie redondonte à supprimer
-
-    Wait Until Element Is Visible    class:opc-progress-bar    30
-    Wait Until Element Is Visible    id:tooltip    30
-
-    Input Text    id:customer-email    random@mail.com
-    Input Text    name:firstname    testeur            
-    Input Text    name:lastname    NomTesteur
-    Input Text    name:street[0]    12 Rue du testeur
-    Input Text    name:city    Testcity
-    Select From List By Index    name:region_id    1
-    Input Text    name:postcode    12345
-    Select From List By Index    name:country_id    1
-    Input Text    name:telephone    061234567890
-    Click Element   name:ko_unique_2   
-    Wait Until Element Is Visible    xpath://span[contains(text(),"Next")]    15
-    Click Element    xpath://span[contains(text(),"Next")] 
-    
-
-    Sleep    20 seconds

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230216 16:06:25.023" rpa="false" schemaversion="3">
+<suite id="s1" name="Projet" source="C:\Users\mbelk\Desktop\Wild code school\Robot Framework\Projet">
+<suite id="s1-s1" name="Magento" source="C:\Users\mbelk\Desktop\Wild code school\Robot Framework\Projet\Magento.robot">
+<test id="s1-s1-t1" name="Accèss au catalogue" line="16">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230216 16:06:25.562" level="INFO">Opening browser 'Chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
+<status status="PASS" starttime="20230216 16:06:25.561" endtime="20230216 16:06:30.728"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:ui-id-4</arg>
+<arg>15</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230216 16:06:30.729" endtime="20230216 16:06:31.271"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:ui-id-4</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230216 16:06:31.283" level="INFO">Clicking element 'id:ui-id-4'.</msg>
+<status status="PASS" starttime="20230216 16:06:31.280" endtime="20230216 16:06:32.443"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://magento.softwaretestingboard.com/women.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230216 16:06:32.588" level="INFO">Current location is 'https://magento.softwaretestingboard.com/women.html'.</msg>
+<status status="PASS" starttime="20230216 16:06:32.445" endtime="20230216 16:06:32.589"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>class:item</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230216 16:06:32.591" endtime="20230216 16:06:32.808"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),"Tops")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230216 16:06:32.811" level="INFO">Clicking element 'xpath://a[contains(text(),"Tops")]'.</msg>
+<status status="PASS" starttime="20230216 16:06:32.809" endtime="20230216 16:06:34.542"/>
+</kw>
+<status status="PASS" starttime="20230216 16:06:25.559" endtime="20230216 16:06:34.544"/>
+</test>
+<test id="s1-s1-t2" name="Ajouter au panier" line="24">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:option-label-size-143-item-168</arg>
+<arg>15</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230216 16:06:34.556" endtime="20230216 16:06:34.954"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:option-label-size-143-item-168</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230216 16:06:34.957" level="INFO">Clicking element 'id:option-label-size-143-item-168'.</msg>
+<status status="PASS" starttime="20230216 16:06:34.956" endtime="20230216 16:06:35.164"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:option-label-color-93-item-60</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230216 16:06:35.172" level="INFO">Clicking element 'id:option-label-color-93-item-60'.</msg>
+<status status="PASS" starttime="20230216 16:06:35.170" endtime="20230216 16:06:35.404"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>class:actions-primary</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230216 16:06:35.405" endtime="20230216 16:06:35.479"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class:actions-primary</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230216 16:06:35.483" level="INFO">Clicking element 'class:actions-primary'.</msg>
+<status status="PASS" starttime="20230216 16:06:35.479" endtime="20230216 16:06:35.643"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>class:price-excluding-tax</arg>
+<arg>15</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230216 16:06:35.643" endtime="20230216 16:06:37.631"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class:minicart-wrapper</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230216 16:06:37.635" level="INFO">Clicking element 'class:minicart-wrapper'.</msg>
+<status status="PASS" starttime="20230216 16:06:37.632" endtime="20230216 16:06:37.786"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Breathe-Easy Tank</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230216 16:06:37.821" level="INFO">Current page contains text 'Breathe-Easy Tank'.</msg>
+<status status="PASS" starttime="20230216 16:06:37.787" endtime="20230216 16:06:37.822"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://magento.softwaretestingboard.com/checkout/#shipping</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230216 16:06:37.824" level="INFO">Opening url 'https://magento.softwaretestingboard.com/checkout/#shipping'</msg>
+<status status="PASS" starttime="20230216 16:06:37.823" endtime="20230216 16:06:39.424"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>class:opc-progress-bar</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230216 16:06:39.426" endtime="20230216 16:06:41.582"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:tooltip</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230216 16:06:41.584" endtime="20230216 16:06:41.824"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:customer-email</arg>
+<arg>random@mail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230216 16:06:41.826" level="INFO">Typing text 'random@mail.com' into text field 'id:customer-email'.</msg>
+<status status="PASS" starttime="20230216 16:06:41.825" endtime="20230216 16:06:42.234"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:firstname</arg>
+<arg>testeur</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230216 16:06:42.237" level="INFO">Typing text 'testeur' into text field 'name:firstname'.</msg>
+<status status="PASS" starttime="20230216 16:06:42.235" endtime="20230216 16:06:42.474"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:lastname</arg>
+<arg>NomTesteur</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230216 16:06:42.479" level="INFO">Typing text 'NomTesteur' into text field 'name:lastname'.</msg>
+<status status="PASS" starttime="20230216 16:06:42.475" endtime="20230216 16:06:42.740"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:street[0]</arg>
+<arg>12 Rue du testeur</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230216 16:06:42.741" level="INFO">Typing text '12 Rue du testeur' into text field 'name:street[0]'.</msg>
+<status status="PASS" starttime="20230216 16:06:42.740" endtime="20230216 16:06:43.053"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:city</arg>
+<arg>Testcity</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230216 16:06:43.056" level="INFO">Typing text 'Testcity' into text field 'name:city'.</msg>
+<status status="PASS" starttime="20230216 16:06:43.054" endtime="20230216 16:06:43.274"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name:region_id</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20230216 16:06:43.277" level="INFO">Selecting options from selection list 'name:region_id' by index 1.</msg>
+<status status="PASS" starttime="20230216 16:06:43.275" endtime="20230216 16:06:43.421"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:postcode</arg>
+<arg>12345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230216 16:06:43.426" level="INFO">Typing text '12345' into text field 'name:postcode'.</msg>
+<status status="PASS" starttime="20230216 16:06:43.423" endtime="20230216 16:06:43.600"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name:country_id</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20230216 16:06:43.602" level="INFO">Selecting options from selection list 'name:country_id' by index 1.</msg>
+<status status="PASS" starttime="20230216 16:06:43.600" endtime="20230216 16:06:43.786"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:telephone</arg>
+<arg>061234567890</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230216 16:06:43.802" level="INFO">Typing text '061234567890' into text field 'name:telephone'.</msg>
+<status status="PASS" starttime="20230216 16:06:43.800" endtime="20230216 16:06:44.050"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:ko_unique_2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230216 16:06:44.053" level="INFO">Clicking element 'name:ko_unique_2'.</msg>
+<status status="PASS" starttime="20230216 16:06:44.051" endtime="20230216 16:06:44.174"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://span[contains(text(),"Next")]</arg>
+<arg>15</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230216 16:06:44.175" endtime="20230216 16:06:44.223"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://span[contains(text(),"Next")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230216 16:06:44.225" level="INFO">Clicking element 'xpath://span[contains(text(),"Next")]'.</msg>
+<status status="PASS" starttime="20230216 16:06:44.224" endtime="20230216 16:06:44.316"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230216 16:07:04.319" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20230216 16:06:44.316" endtime="20230216 16:07:04.320"/>
+</kw>
+<status status="PASS" starttime="20230216 16:06:34.554" endtime="20230216 16:07:04.323"/>
+</test>
+<status status="PASS" starttime="20230216 16:06:25.133" endtime="20230216 16:07:04.332"/>
+</suite>
+<status status="PASS" starttime="20230216 16:06:25.030" endtime="20230216 16:07:04.347"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Projet">Projet</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Magento">Projet.Magento</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
